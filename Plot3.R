@@ -2,13 +2,11 @@
 ## 
 ## 
 ## Plot Energy submetering vs. day-time
-## 2020-02-21
 ## 
 ## 
 ## ###################################
 
 library(lubridate)
-
 
 
 ## Step1: Reading data
@@ -25,11 +23,9 @@ data$full_date <- as_datetime(data$full_date)
 selected_dataset <- data[which(data$Date %in% as.Date(c("2007-02-01", "2007-02-02"))),] 
 
 
-
 ## Step5: Change columns with energy submetering to numeric
 energy_columns <- grepl("Sub_metering", colnames(selected_dataset), fixed=F)
 selected_dataset[,energy_columns] <- lapply(selected_dataset[,energy_columns], function(x) {as.numeric(x)})
-
 
 
 ## Step6: Plotting line plot - Energy sub metering vs. weekdays
