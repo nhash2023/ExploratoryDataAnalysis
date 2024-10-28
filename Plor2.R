@@ -2,7 +2,6 @@
 ## 
 ## 
 ## 
-## 2020-02-21
 ## 
 ## 
 ## ###################################
@@ -28,9 +27,9 @@ selected_dataset$Global_active_power <- as.numeric(selected_dataset$Global_activ
 
 
 ## Step6: Plotting line plot - Global Active Power vs. weekdays
-png(filename="plot2.png", width=480, height = 480 )
+png(filename="plot2.png", width=480, height = 480)
 
 with(selected_dataset, plot(Global_active_power~full_date, type='l', 
-                            xlab = "", ylab="Global Active Power (kilowatts)" ))
+                            xlab = "", ylab="Global Active Power (kilowatts)"))
 
 dev.off()
