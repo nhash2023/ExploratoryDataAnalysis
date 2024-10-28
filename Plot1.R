@@ -1,11 +1,10 @@
 ## Plot1.R
 ## 
 ## 
+##
 ## 
-## 2020-02-21
 ## 
-## 
-## ###################################
+## #################################
 
 
 ## Step1: Reading data
@@ -14,7 +13,6 @@ data <- read.table("household_power_consumption.txt", sep = ";", header = T, str
 
 ## Step2: Convert Date column to date object
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
-
 
 ## Step3:Extract data for the following days 2007-02-01 and 2007-02-02.
 selected_dataset <- data[which(data$Date %in% as.Date(c("2007-02-01", "2007-02-02"))),] 
